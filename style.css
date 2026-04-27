@@ -144,6 +144,31 @@ body {
     flex: 1;
 }
 
+.education-section {
+    min-height: 100vh;
+    padding: 100px 0;
+}
+
+
+.header-line {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    font-family: 'Oswald', sans-serif;
+    font-size: 2.5rem;
+    letter-spacing: 2px;
+    color: var(--text-primary);
+}
+
+.header-line::before,
+.header-line::after {
+    content: "";
+    flex: 1;
+    border-bottom: 1px solid var(--text-secondary);
+    margin: 0 2rem;
+}
+
 /* Scattered Tech Icons (Like Legos) */
 .floating-tech {
     position: relative;
@@ -273,53 +298,52 @@ body {
     cursor: pointer;
 }
 
-.primary-btn {
-    background-color: var(--accent);
-    color: var(--bg-color);
-    border: 2px solid var(--accent);
+.social-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.6rem;
 }
 
-.primary-btn:hover {
-    background-color: transparent;
-    color: var(--accent);
+.social-btn i {
+    font-size: 1.3rem;
 }
 
-.secondary-btn {
+.github-btn {
     background-color: transparent;
     color: var(--text-primary);
     border: 2px solid var(--text-primary);
 }
 
-.secondary-btn:hover {
+.github-btn:hover {
     background-color: var(--text-primary);
     color: var(--bg-color);
 }
 
-/* Image Placeholder */
+.linkedin-btn {
+    background-color: transparent;
+    color: #0077b5;
+    border: 2px solid #0077b5;
+}
+
+.linkedin-btn:hover {
+    background-color: #0077b5;
+    color: #fff;
+}
+
+/* Profile Image */
 .landing-image-container {
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.image-placeholder {
+.profile-image {
     width: 450px;
     height: 600px;
     border-radius: 10%;
-    background: linear-gradient(135deg, rgba(56, 189, 248, 0.1), rgba(56, 189, 248, 0.05));
-    border: 2px dashed var(--accent);
-    position: relative;
-}
-
-.image-placeholder::after {
-    content: 'Profile Image Here';
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    color: var(--accent);
-    font-weight: 500;
-    opacity: 0.7;
+    object-fit: cover;
+    box-shadow: 0 0 40px rgba(56, 189, 248, 0.15);
+    border: 2px solid rgba(56, 189, 248, 0.2);
 }
 
 /* Responsive adjustments for landing section */
@@ -355,9 +379,9 @@ body {
         font-size: 1.5rem;
     }
 
-    .image-placeholder {
-        width: 250px;
-        height: 250px;
+    .profile-image {
+        width: 300px;
+        height: 400px;
     }
 
     .landing-actions {
