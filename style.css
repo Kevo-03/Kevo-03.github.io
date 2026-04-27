@@ -1,0 +1,366 @@
+:root {
+    --bg-color: #0f172a;
+    /* Slate 900 */
+    --nav-bg: 0f172a;
+    --text-primary: #f8fafc;
+    /* Slate 50 */
+    --text-secondary: #94a3b8;
+    /* Slate 400 */
+    --accent: #38bdf8;
+    /* Sky 400 */
+    --transition: all 0.3s ease;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-primary);
+    font-family: 'Oswald', sans-serif;
+    min-height: 200vh;
+    /* Added to demonstrate sticky navbar and blur */
+}
+
+/* Navbar Styles */
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: var(--nav-bg);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    z-index: 1000;
+    padding: 1.25rem 0;
+    transition: var(--transition);
+}
+
+.nav-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.nav-logo {
+    font-family: 'Oswald', sans-serif;
+    font-size: 2.2rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    text-decoration: none;
+    letter-spacing: 1px;
+    transition: var(--transition);
+}
+
+.nav-logo span {
+    color: var(--accent);
+}
+
+.nav-logo:hover {
+    transform: scale(1.05);
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 3rem;
+}
+
+.nav-link {
+    color: var(--text-secondary);
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 1.05rem;
+    transition: var(--transition);
+}
+
+.nav-link:hover {
+    color: var(--text-primary);
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .nav-links {
+        gap: 1.5rem;
+    }
+
+    .nav-link {
+        font-size: 0.95rem;
+    }
+
+    .nav-logo {
+        font-size: 1.8rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .nav-container {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .nav-links {
+        width: 100%;
+        justify-content: space-between;
+        gap: 0.5rem;
+    }
+}
+
+/* Container Utility */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+/* Landing Section */
+.landing-section {
+    min-height: 100vh;
+    /* Make it take the full height of the viewport */
+    display: flex;
+    align-items: center;
+    /* Center content vertically */
+    padding-top: 5rem;
+    /* Account for the fixed navbar */
+}
+
+.landing-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    gap: 4rem;
+    width: 100%;
+}
+
+.landing-text,
+.landing-image-container {
+    flex: 1;
+}
+
+/* Scattered Tech Icons (Like Legos) */
+.floating-tech {
+    position: relative;
+    height: 180px;
+    margin-bottom: 1rem;
+    width: 100%;
+}
+
+.floating-tech i {
+    position: absolute;
+    font-size: 2.4rem;
+    opacity: 0.95;
+    /* Give them a slightly harder, toy-like shadow */
+    filter: drop-shadow(3px 5px 4px rgba(0, 0, 0, 0.4));
+    transition: transform 0.2s ease;
+}
+
+.floating-tech i:hover {
+    transform: scale(1.1) rotate(0deg) !important;
+    z-index: 10;
+}
+
+/* Position each icon overlapping and rotated like scattered toys */
+.icon-ts {
+    bottom: 10px;
+    left: 10px;
+    transform: rotate(-15deg);
+    z-index: 1;
+    font-size: 2.2rem;
+}
+
+.icon-react {
+    bottom: 150px;
+    left: 30px;
+    transform: rotate(12deg);
+    font-size: 2.6rem;
+    z-index: 3;
+}
+
+.icon-nestjs {
+    bottom: 75px;
+    left: 105px;
+    transform: rotate(-25deg);
+    font-size: 2.1rem;
+    z-index: 2;
+}
+
+.icon-fastapi {
+    bottom: 160px;
+    left: 140px;
+    transform: rotate(18deg);
+    font-size: 2.8rem;
+    z-index: 4;
+}
+
+.icon-docker {
+    bottom: 13px;
+    left: 180px;
+    transform: rotate(-8deg);
+    font-size: 2.5rem;
+    z-index: 1;
+}
+
+.icon-spring {
+    bottom: 90px;
+    left: 240px;
+    transform: rotate(25deg);
+    font-size: 2.3rem;
+    z-index: 3;
+}
+
+.icon-python {
+    bottom: 5px;
+    left: 300px;
+    transform: rotate(-12deg);
+    font-size: 2.9rem;
+    z-index: 2;
+}
+
+.icon-nodejs {
+    bottom: 145px;
+    left: 320px;
+    transform: rotate(-20deg);
+    font-size: 2.4rem;
+    z-index: 4;
+}
+
+.landing-text h1 {
+    font-size: 3.5rem;
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: 1rem;
+}
+
+.landing-text h1 .highlight {
+    color: var(--accent);
+}
+
+.landing-text h2 {
+    font-size: 2rem;
+    color: var(--text-secondary);
+    font-weight: 400;
+    margin-bottom: 1.5rem;
+}
+
+.landing-text p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: var(--text-secondary);
+    margin-bottom: 2.5rem;
+    max-width: 90%;
+}
+
+/* Buttons */
+.landing-actions {
+    display: flex;
+    gap: 1rem;
+}
+
+.btn {
+    padding: 0.8rem 1.8rem;
+    border-radius: 6px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: var(--transition);
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.primary-btn {
+    background-color: var(--accent);
+    color: var(--bg-color);
+    border: 2px solid var(--accent);
+}
+
+.primary-btn:hover {
+    background-color: transparent;
+    color: var(--accent);
+}
+
+.secondary-btn {
+    background-color: transparent;
+    color: var(--text-primary);
+    border: 2px solid var(--text-primary);
+}
+
+.secondary-btn:hover {
+    background-color: var(--text-primary);
+    color: var(--bg-color);
+}
+
+/* Image Placeholder */
+.landing-image-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.image-placeholder {
+    width: 450px;
+    height: 600px;
+    border-radius: 10%;
+    background: linear-gradient(135deg, rgba(56, 189, 248, 0.1), rgba(56, 189, 248, 0.05));
+    border: 2px dashed var(--accent);
+    position: relative;
+}
+
+.image-placeholder::after {
+    content: 'Profile Image Here';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: var(--accent);
+    font-weight: 500;
+    opacity: 0.7;
+}
+
+/* Responsive adjustments for landing section */
+@media (max-width: 992px) {
+    .landing-content {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 3rem;
+        padding-top: 2rem;
+    }
+
+    .landing-text p {
+        margin: 0 auto 2.5rem auto;
+    }
+
+    .landing-actions {
+        justify-content: center;
+    }
+
+    .landing-image-container {
+        order: -1;
+        /* Move image to top on mobile */
+    }
+}
+
+@media (max-width: 576px) {
+    .landing-text h1 {
+        font-size: 2.5rem;
+    }
+
+    .landing-text h2 {
+        font-size: 1.5rem;
+    }
+
+    .image-placeholder {
+        width: 250px;
+        height: 250px;
+    }
+
+    .landing-actions {
+        flex-direction: column;
+    }
+}
