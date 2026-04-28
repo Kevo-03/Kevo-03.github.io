@@ -146,7 +146,21 @@ body {
 
 .education-section {
     min-height: 100vh;
-    padding: 100px 0;
+    padding-top: 5rem;
+    display: flex;
+    align-items: flex-start;
+}
+
+.edu-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+.edu-pharagraph-header {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
 }
 
 
@@ -155,10 +169,8 @@ body {
     align-items: center;
     text-align: center;
     width: 100%;
-    font-family: 'Oswald', sans-serif;
     font-size: 2.5rem;
     letter-spacing: 2px;
-    color: var(--text-primary);
 }
 
 .header-line::before,
@@ -166,7 +178,14 @@ body {
     content: "";
     flex: 1;
     border-bottom: 1px solid var(--text-secondary);
-    margin: 0 2rem;
+}
+
+.header-line::before {
+    margin-right: 2rem;
+}
+
+.header-line::after {
+    margin-left: 2rem;
 }
 
 /* Scattered Tech Icons (Like Legos) */
