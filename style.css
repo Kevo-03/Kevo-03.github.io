@@ -21,8 +21,6 @@ body {
     background-color: var(--bg-color);
     color: var(--text-primary);
     font-family: 'Oswald', sans-serif;
-    min-height: 200vh;
-    /* Added to demonstrate sticky navbar and blur */
 }
 
 /* Navbar Styles */
@@ -120,6 +118,11 @@ body {
     padding: 0 2rem;
 }
 
+.pharagraph-container {
+    margin-bottom: 2rem;
+    margin-top: 2rem;
+}
+
 /* Landing Section */
 .landing-section {
     min-height: 100vh;
@@ -145,8 +148,8 @@ body {
 }
 
 .education-section {
-    min-height: 100vh;
-    padding-top: 5rem;
+    padding-top: 1rem;
+    padding-bottom: 3rem;
     display: flex;
     align-items: flex-start;
 }
@@ -158,9 +161,10 @@ body {
     align-items: flex-start;
 }
 
-.edu-pharagraph-header {
+.pharagraph-header {
     margin-top: 1rem;
     margin-bottom: 1rem;
+    color: var(--accent);
 }
 
 
@@ -171,7 +175,10 @@ body {
     width: 100%;
     font-size: 2.5rem;
     letter-spacing: 2px;
+    margin-top: 3rem;
+    margin-bottom: 3rem;
 }
+
 
 .header-line::before,
 .header-line::after {
