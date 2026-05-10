@@ -154,11 +154,76 @@ body {
     align-items: flex-start;
 }
 
-.edu-content {
+/* Education Card Grid */
+.edu-card-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+    width: 100%;
+}
+
+.edu-card {
+    border-left: 3px solid var(--accent);
+    padding: 1.75rem 1.75rem 1.75rem 1.5rem;
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
-    align-items: flex-start;
+    gap: 1rem;
+}
+
+/* Right-side column: stacks two cards vertically */
+
+/* University card spans the full top row */
+.edu-card-main {
+    grid-column: 1 / -1;
+}
+
+.edu-card-header {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+}
+
+.edu-card-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--text-primary);
+    letter-spacing: 0.5px;
+}
+
+.edu-card-subtitle {
+    font-size: 0.95rem;
+    color: var(--text-secondary);
+    font-weight: 400;
+}
+
+.edu-card-badges {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.edu-badge {
+    display: inline-block;
+    padding: 0.25rem 0.75rem;
+    border-radius: 999px;
+    font-size: 0.8rem;
+    font-weight: 500;
+    color: var(--accent);
+    border: 1px solid rgba(56, 189, 248, 0.3);
+    background-color: rgba(56, 189, 248, 0.07);
+    letter-spacing: 0.3px;
+}
+
+.edu-card-body {
+    font-size: 0.975rem;
+    line-height: 1.7;
+    color: var(--text-secondary);
+}
+
+@media (max-width: 768px) {
+    .edu-card-grid {
+        grid-template-columns: 1fr;
+    }
 }
 
 .pharagraph-header {
@@ -171,7 +236,6 @@ body {
 .header-line {
     display: flex;
     align-items: center;
-    text-align: center;
     width: 100%;
     font-size: 2.5rem;
     letter-spacing: 2px;
@@ -179,19 +243,14 @@ body {
     margin-bottom: 3rem;
 }
 
+.header-line::before {
+    content: none;
+}
 
-.header-line::before,
 .header-line::after {
     content: "";
     flex: 1;
     border-bottom: 1px solid var(--text-secondary);
-}
-
-.header-line::before {
-    margin-right: 2rem;
-}
-
-.header-line::after {
     margin-left: 2rem;
 }
 
