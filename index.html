@@ -111,30 +111,83 @@
 
             </div>
         </section>
-        <h2 class="container header-line">EXPERIENCE</h2>
+        <h2 class="container header-line" id="experience">EXPERIENCE</h2>
         <section class="education-section">
             <div class="container">
-                <div class="pharagraph-container">
-                    <h2 class="pharagraph-header">Software Design Intern at Token Financial Technologies-2025</h2>
-                    <p>
-                        I worked as a Software Design Intern at Token Financial Technologies between June and
-                        August of 2025. I worked on building an internal URL shortener service for the use of employees
-                        in their workflow.
+                <div class="exp-group">
 
+                    <!-- Internship main card -->
+                    <div class="edu-card edu-card-main exp-main-card">
+                        <div class="edu-card-header">
+                            <h3 class="edu-card-title">Token Financial Technologies</h3>
+                            <span class="edu-card-subtitle">Software Design Intern · Jun – Aug 2025</span>
+                        </div>
+                        <div class="edu-card-badges">
+                            <span class="edu-badge">Internship</span>
+                            <span class="edu-badge">NestJS</span>
+                            <span class="edu-badge">Redis</span>
+                        </div>
+                        <p class="edu-card-body">
+                            Built an internal URL shortener service to be used by company employees in their daily
+                            workflow.
+                            Integrated custom company modules for consistent error handling among company codebase,
+                            delivered end-to-end tests to ensure product reliability,
+                            and handed over the project alongside a full API documentation prepared with Postman.
+                        </p>
+                    </div>
 
-                        Gained experience on fullstack development, end to end testing, API documentation and most
-                        importantly system design.
-                        I have used NestJS for API implementation and Redis as primary the database to provide high
-                        speed long URL retrieval.
-                        Since the service was intended to be used by employees in the company I have found using Redis
-                        as the primary database instead of an extra caching mmodule on top of a relational database.
-                        I have also integrated custom company modules for consisten error handling within company
-                        workflow, so i have gained experience with reading a company codebase.
-                        Before shipping the service, end to end tests were implemented to ensure the reliability of the
-                        service. I have handed over the project for deployment to our DevOps lead alongside a detailed
-                        API documentation prepared with Postman.
-                        .
-                    </p>
+                    <p class="exp-highlights-label">KEY HIGHLIGHTS</p>
+
+                    <div class="exp-highlights-grid">
+
+                        <div class="exp-highlight-card">
+                            <div class="edu-card-header">
+                                <h3 class="edu-card-title">System Design</h3>
+                            </div>
+                            <p class="edu-card-body">
+                                Designed the architecture for the URL shortener by evaluating tradeoffs of various
+                                design
+                                choices. Chose Redis as the primary database over a relational database + cache setup to
+                                maximise retrieval speed for an internal
+                                high-frequency use case. Implemented server side redirections to prevent XSS
+                                vulnerabilities which could occur with client side redirections.
+                            </p>
+                        </div>
+
+                        <div class="exp-highlight-card">
+                            <div class="edu-card-header">
+                                <h3 class="edu-card-title">Scrum &amp; Agile</h3>
+                            </div>
+                            <p class="edu-card-body">
+                                Participated in sprint ceremonies, daily stand-ups, sprint planning, and retrospectives,
+                                working within a cross-functional engineering team and adapting to an existing company
+                                codebase.
+                            </p>
+                        </div>
+
+                        <div class="exp-highlight-card">
+                            <div class="edu-card-header">
+                                <h3 class="edu-card-title">End-to-End Testing</h3>
+                            </div>
+                            <p class="edu-card-body">
+                                Implemented E2E tests prior to shipping the service, ensuring reliability and
+                                correctness
+                                of the full request-response cycle before handover to our DevOps lead for deployment.
+                            </p>
+                        </div>
+
+                        <div class="exp-highlight-card">
+                            <div class="edu-card-header">
+                                <h3 class="edu-card-title">API Documentation</h3>
+                            </div>
+                            <p class="edu-card-body">
+                                Prepared detailed API documentation using Postman covering all endpoints,
+                                request/response
+                                schemas, and error codes, enabling smooth handover and future maintenance by the team.
+                            </p>
+                        </div>
+
+                    </div>
                 </div>
             </div>
         </section>

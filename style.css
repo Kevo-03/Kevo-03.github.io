@@ -226,6 +226,53 @@ body {
     }
 }
 
+/* Experience Group — shared left border wraps internship + highlights */
+.exp-group {
+    border-left: 3px solid var(--accent);
+    padding-left: 1.75rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+}
+
+/* Main internship card — no own left border, the group provides it */
+.exp-main-card {
+    border-left: none;
+    padding-left: 0;
+}
+
+/* "KEY HIGHLIGHTS" label */
+.exp-highlights-label {
+    font-size: 0.7rem;
+    font-weight: 600;
+    letter-spacing: 2px;
+    color: var(--text-secondary);
+    opacity: 0.6;
+    margin-bottom: -0.25rem;
+}
+
+/* 2-column grid for the highlight sub-cards */
+.exp-highlights-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+}
+
+/* Highlight sub-card — dimmer, thinner left border to signal child status */
+.exp-highlight-card {
+    border-left: 1px solid rgba(56, 189, 248, 0.35);
+    padding: 1rem 1rem 1rem 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+@media (max-width: 768px) {
+    .exp-highlights-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
 .pharagraph-header {
     margin-top: 1rem;
     margin-bottom: 1rem;
