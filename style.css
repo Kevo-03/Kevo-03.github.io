@@ -184,14 +184,14 @@ body {
 }
 
 .edu-card-title {
-    font-size: 1.25rem;
+    font-size: 1.5rem;
     font-weight: 600;
     color: var(--text-primary);
     letter-spacing: 0.5px;
 }
 
 .edu-card-subtitle {
-    font-size: 0.95rem;
+    font-size: 1.1rem;
     color: var(--text-secondary);
     font-weight: 400;
 }
@@ -206,16 +206,15 @@ body {
     display: inline-block;
     padding: 0.25rem 0.75rem;
     border-radius: 999px;
-    font-size: 0.8rem;
+    font-size: 0.95rem;
     font-weight: 500;
     color: var(--accent);
     border: 1px solid rgba(56, 189, 248, 0.3);
-    background-color: rgba(56, 189, 248, 0.07);
     letter-spacing: 0.3px;
 }
 
 .edu-card-body {
-    font-size: 0.975rem;
+    font-size: 1.15rem;
     line-height: 1.7;
     color: var(--text-secondary);
 }
@@ -243,7 +242,7 @@ body {
 
 /* "KEY HIGHLIGHTS" label */
 .exp-highlights-label {
-    font-size: 0.7rem;
+    font-size: 0.8rem;
     font-weight: 600;
     letter-spacing: 2px;
     color: var(--text-secondary);
@@ -284,7 +283,7 @@ body {
     display: flex;
     align-items: center;
     width: 100%;
-    font-size: 2.5rem;
+    font-size: 2rem;
     letter-spacing: 2px;
     margin-top: 3rem;
     margin-bottom: 3rem;
@@ -400,14 +399,14 @@ body {
 }
 
 .landing-text h2 {
-    font-size: 2rem;
+    font-size: 1.5rem;
     color: var(--text-secondary);
     font-weight: 400;
     margin-bottom: 1.5rem;
 }
 
 .landing-text p {
-    font-size: 1.1rem;
+    font-size: 1.15rem;
     line-height: 1.6;
     color: var(--text-secondary);
     margin-bottom: 2.5rem;
@@ -426,7 +425,7 @@ body {
     font-weight: 600;
     text-decoration: none;
     transition: var(--transition);
-    font-size: 1rem;
+    font-size: 1.15rem;
     cursor: pointer;
 }
 
@@ -453,12 +452,12 @@ body {
 
 .linkedin-btn {
     background-color: transparent;
-    color: #0077b5;
-    border: 2px solid #0077b5;
+    color: var(--accent);
+    border: 2px solid var(--accent);
 }
 
 .linkedin-btn:hover {
-    background-color: #0077b5;
+    background-color: var(--accent);
     color: #fff;
 }
 
