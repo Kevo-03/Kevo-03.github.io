@@ -55,11 +55,14 @@
                         <p>
                             NeuralArt lets users upload photographs and apply the visual style of famous artworks or
                             custom style images to them using neural style transfer. The results are stored in a
-                            personal library that users can manage and revisit.
+                            personal library that users can manage and revisit. Users who don't have an account can
+                            generate images without the access to a library. The photos are stored in S3 compatible
+                            DigitalOcean Spaces and shown via presigned URLs to ensure user privacy.
                         </p>
                         <p>
-                            Add your full description here — what motivated the project, the user experience you
-                            aimed for, and the key design decisions.
+                            Neural Art uses Google Magenta for Neural Style Transfer. It allows the service to apply
+                            Neural Style Transfer much faster than Gatys method, while also let the app be deployed on a
+                            budget VPS.
                         </p>
                     </div>
                 </div>
@@ -71,24 +74,30 @@
                     <div class="proj-section-body">
                         <p>
                             <strong style="color: var(--text-primary);">Async Processing with Celery —</strong>
-                            Neural style transfer is computationally expensive. Tasks are offloaded to Celery workers
-                            so style transfer runs asynchronously without blocking the API response. Redis acts as the
-                            Celery message broker.
+                            Neural Style Transfer is computationally expensive. Tasks are offloaded to Celery workers
+                            so Neural Style Transfer runs asynchronously without blocking the API response. Redis acts
+                            as the Celery message broker.
                         </p>
                         <p>
                             <strong style="color: var(--text-primary);">FastAPI Backend —</strong>
-                            Handles user authentication, image uploads, task dispatch, and library management. Add
-                            further technical detail about your API design here.
+                            Handles user authentication, image uploads, task dispatch, and library management.
+                            Authentication is handled via HTTP only cookies and JWT. File uploads are handled via boto3
+                            library for S3.
+
                         </p>
                         <p>
                             <strong style="color: var(--text-primary);">Next.js Frontend —</strong>
-                            Provides the user interface for uploading images, selecting styles, viewing progress, and
-                            browsing the personal library. Add details about your frontend architecture here.
+                            User interface is implemented with Next.js App Router.
                         </p>
                         <p>
                             <strong style="color: var(--text-primary);">PostgreSQL —</strong>
-                            Stores user accounts, image metadata, and library relationships. Add your schema
-                            decisions here.
+                            Stores user accounts, image metadata (DigitalOcean space paths, completion status etc.), and
+                            library relationships.
+                        </p>
+                        <p>
+                            <strong style="color: var(--text-primary);">Docker and Deployment —</strong>
+                            The whole app is deployed on a DigitalOcean VPS using Docker and Docker Compose. DNS is
+                            managed via Cloudflare. NGINX is used as a reverse proxy.
                         </p>
                     </div>
                 </div>
