@@ -154,6 +154,71 @@ body {
     align-items: flex-start;
 }
 
+/* Projects Section */
+.projects-section {
+    padding-top: 1rem;
+    padding-bottom: 4rem;
+}
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+}
+
+.project-card {
+    border-left: 3px solid var(--accent);
+    padding: 1.5rem 1.5rem 1.5rem 1.25rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    text-decoration: none;
+    color: inherit;
+    cursor: pointer;
+}
+
+.project-card:hover {
+    border-left-color: #7dd3fc;
+}
+
+.project-card:hover .project-card-title {
+    color: #7dd3fc;
+}
+
+.project-card-title {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--text-primary);
+    letter-spacing: 0.5px;
+    transition: color 0.2s ease;
+}
+
+.project-card-body {
+    font-size: 1.15rem;
+    line-height: 1.6;
+    color: var(--text-secondary);
+    flex: 1;
+}
+
+.project-card-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+    margin-top: auto;
+}
+
+@media (max-width: 992px) {
+    .projects-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 576px) {
+    .projects-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
 /* Education Card Grid */
 .edu-card-grid {
     display: grid;
