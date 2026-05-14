@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Attention Net — Kıvanç Onat Türker</title>
+    <link rel="stylesheet" href="../style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <ul class="nav-links">
+                <li><a href="../index.html#about" class="nav-link">About Me</a></li>
+                <li><a href="../index.html#education" class="nav-link">Education</a></li>
+                <li><a href="../index.html#experience" class="nav-link">Experience</a></li>
+                <li><a href="../index.html#projects" class="nav-link">Projects</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main>
+        <!-- Hero -->
+        <section class="project-hero">
+            <div class="container">
+                <a href="../index.html#projects" class="back-link">← Back to Projects</a>
+                <h1 class="proj-title">Attention Net</h1>
+                <div class="proj-badges">
+                    <span class="edu-badge">Python</span>
+                    <span class="edu-badge">PyTorch</span>
+                    <span class="edu-badge">Scapy</span>
+                    <span class="edu-badge">Streamlit</span>
+                </div>
+                <p class="proj-tagline">
+                    A CNN-Transformer hybrid model for encrypted network traffic classification, paired with a
+                    real-time analysis dashboard.
+                </p>
+            </div>
+        </section>
+
+        <!-- Content -->
+        <section class="project-content">
+            <div class="container">
+
+                <div class="proj-section">
+                    <h2 class="proj-section-title">OVERVIEW</h2>
+                    <div class="proj-section-body">
+                        <p>
+                            Attention Net classifies encrypted network traffic without decryption by analysing
+                            packet-level features. The CNN layers extract local byte-pattern features while the
+                            Transformer's self-attention mechanism captures long-range dependencies across packet
+                            sequences.
+                        </p>
+                        <p>
+                            Add your full description here — the motivation for the project, the dataset used,
+                            classification categories, and any results or metrics.
+                        </p>
+                    </div>
+                </div>
+
+                <hr class="proj-divider">
+
+                <div class="proj-section">
+                    <h2 class="proj-section-title">MODEL ARCHITECTURE</h2>
+                    <div class="proj-section-body">
+                        <p>
+                            <strong style="color: var(--text-primary);">CNN-Transformer Hybrid —</strong>
+                            Add your architecture details here — layer counts, input representation, attention heads,
+                            embedding dimensions, and how the CNN and Transformer stages are connected.
+                        </p>
+                        <p>
+                            <strong style="color: var(--text-primary);">Traffic Capture with Scapy —</strong>
+                            Scapy is used to capture and pre-process raw network packets into feature vectors suitable
+                            for model input. Add details about your feature extraction approach.
+                        </p>
+                        <p>
+                            <strong style="color: var(--text-primary);">Real-Time Dashboard —</strong>
+                            A Streamlit dashboard visualises live classification results, traffic distributions, and
+                            model confidence scores in real time. Add detail about the dashboard's functionality.
+                        </p>
+                    </div>
+                </div>
+
+                <hr class="proj-divider">
+
+                <!-- Images -->
+                <div class="proj-section">
+                    <h2 class="proj-section-title">SCREENSHOTS</h2>
+                    <div class="proj-images-grid">
+                        <!-- <img src="../images/projects/attentionnet-1.png" class="proj-image" alt="Dashboard view"> -->
+                        <!-- <img src="../images/projects/attentionnet-2.png" class="proj-image" alt="Model architecture"> -->
+                        <p class="proj-section-body" style="color: var(--text-secondary); opacity: 0.5;">
+                            Screenshots will appear here.
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+    </main>
+</body>
+
+</html>

@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NeuralArt — Kıvanç Onat Türker</title>
+    <link rel="stylesheet" href="../style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <ul class="nav-links">
+                <li><a href="../index.html#about" class="nav-link">About Me</a></li>
+                <li><a href="../index.html#education" class="nav-link">Education</a></li>
+                <li><a href="../index.html#experience" class="nav-link">Experience</a></li>
+                <li><a href="../index.html#projects" class="nav-link">Projects</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main>
+        <!-- Hero -->
+        <section class="project-hero">
+            <div class="container">
+                <a href="../index.html#projects" class="back-link">← Back to Projects</a>
+                <h1 class="proj-title">NeuralArt</h1>
+                <div class="proj-badges">
+                    <span class="edu-badge">FastAPI</span>
+                    <span class="edu-badge">Next.js</span>
+                    <span class="edu-badge">Celery</span>
+                    <span class="edu-badge">Redis</span>
+                    <span class="edu-badge">PostgreSQL</span>
+                    <span class="edu-badge">DigitalOcean</span>
+                </div>
+                <p class="proj-tagline">
+                    A photo gallery app where users can apply artistic styles to their photographs using neural style
+                    transfer and store the results in their personal library.
+                </p>
+            </div>
+        </section>
+
+        <!-- Content -->
+        <section class="project-content">
+            <div class="container">
+
+                <div class="proj-section">
+                    <h2 class="proj-section-title">OVERVIEW</h2>
+                    <div class="proj-section-body">
+                        <p>
+                            NeuralArt lets users upload photographs and apply the visual style of famous artworks or
+                            custom style images to them using neural style transfer. The results are stored in a
+                            personal library that users can manage and revisit.
+                        </p>
+                        <p>
+                            Add your full description here — what motivated the project, the user experience you
+                            aimed for, and the key design decisions.
+                        </p>
+                    </div>
+                </div>
+
+                <hr class="proj-divider">
+
+                <div class="proj-section">
+                    <h2 class="proj-section-title">ARCHITECTURE</h2>
+                    <div class="proj-section-body">
+                        <p>
+                            <strong style="color: var(--text-primary);">Async Processing with Celery —</strong>
+                            Neural style transfer is computationally expensive. Tasks are offloaded to Celery workers
+                            so style transfer runs asynchronously without blocking the API response. Redis acts as the
+                            Celery message broker.
+                        </p>
+                        <p>
+                            <strong style="color: var(--text-primary);">FastAPI Backend —</strong>
+                            Handles user authentication, image uploads, task dispatch, and library management. Add
+                            further technical detail about your API design here.
+                        </p>
+                        <p>
+                            <strong style="color: var(--text-primary);">Next.js Frontend —</strong>
+                            Provides the user interface for uploading images, selecting styles, viewing progress, and
+                            browsing the personal library. Add details about your frontend architecture here.
+                        </p>
+                        <p>
+                            <strong style="color: var(--text-primary);">PostgreSQL —</strong>
+                            Stores user accounts, image metadata, and library relationships. Add your schema
+                            decisions here.
+                        </p>
+                    </div>
+                </div>
+
+                <hr class="proj-divider">
+
+                <!-- Images -->
+                <div class="proj-section">
+                    <h2 class="proj-section-title">SCREENSHOTS</h2>
+                    <div class="proj-images-grid">
+                        <!-- <img src="../images/projects/neuralart-1.png" class="proj-image" alt="Gallery view"> -->
+                        <!-- <img src="../images/projects/neuralart-2.png" class="proj-image" alt="Style transfer result"> -->
+                        <p class="proj-section-body" style="color: var(--text-secondary); opacity: 0.5;">
+                            Screenshots will appear here.
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+    </main>
+</body>
+
+</html>

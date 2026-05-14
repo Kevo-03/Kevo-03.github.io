@@ -584,3 +584,129 @@ body {
         flex-direction: column;
     }
 }
+
+/* =============================================
+   Project Detail Page Styles
+   ============================================= */
+
+.project-hero {
+    padding-top: 8rem;
+    padding-bottom: 3rem;
+}
+
+.back-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    color: var(--text-secondary);
+    text-decoration: none;
+    font-size: 1rem;
+    letter-spacing: 0.5px;
+    margin-bottom: 2.5rem;
+    transition: color 0.2s ease;
+}
+
+.back-link:hover {
+    color: var(--accent);
+}
+
+.proj-title {
+    font-size: 3.2rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    line-height: 1.15;
+    margin-bottom: 1.25rem;
+    letter-spacing: 1px;
+}
+
+.proj-badges {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-bottom: 1.75rem;
+}
+
+.proj-tagline {
+    font-size: 1.2rem;
+    color: var(--text-secondary);
+    line-height: 1.7;
+    max-width: 750px;
+    border-left: 3px solid var(--accent);
+    padding-left: 1.25rem;
+}
+
+/* Project content area */
+.project-content {
+    padding-bottom: 6rem;
+}
+
+.proj-divider {
+    border: none;
+    border-top: 1px solid rgba(255, 255, 255, 0.07);
+    margin: 2.5rem 0;
+}
+
+.proj-section {
+    margin-bottom: 2.5rem;
+}
+
+.proj-section-title {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--text-primary);
+    letter-spacing: 1px;
+    margin-bottom: 1rem;
+}
+
+.proj-section-body {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: var(--text-secondary);
+}
+
+.proj-section-body p + p {
+    margin-top: 1rem;
+}
+
+/* Image grid */
+.proj-images-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+    margin-top: 1.5rem;
+}
+
+.proj-image {
+    width: 100%;
+    border-radius: 4px;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    object-fit: cover;
+    display: block;
+}
+
+.proj-image-caption {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    opacity: 0.7;
+    margin-top: 0.5rem;
+    text-align: center;
+}
+
+.proj-image-full {
+    width: 100%;
+    border-radius: 4px;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    object-fit: cover;
+    display: block;
+    margin-top: 1.5rem;
+}
+
+@media (max-width: 768px) {
+    .proj-title {
+        font-size: 2.2rem;
+    }
+
+    .proj-images-grid {
+        grid-template-columns: 1fr;
+    }
+}

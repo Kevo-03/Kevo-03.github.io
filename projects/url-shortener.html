@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>URL Shortener Service — Kıvanç Onat Türker</title>
+    <link rel="stylesheet" href="../style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <ul class="nav-links">
+                <li><a href="../index.html#about" class="nav-link">About Me</a></li>
+                <li><a href="../index.html#education" class="nav-link">Education</a></li>
+                <li><a href="../index.html#experience" class="nav-link">Experience</a></li>
+                <li><a href="../index.html#projects" class="nav-link">Projects</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main>
+        <!-- Hero -->
+        <section class="project-hero">
+            <div class="container">
+                <a href="../index.html#projects" class="back-link">← Back to Projects</a>
+                <h1 class="proj-title">URL Shortener Service</h1>
+                <div class="proj-badges">
+                    <span class="edu-badge">NestJS</span>
+                    <span class="edu-badge">Redis</span>
+                    <span class="edu-badge">NanoID</span>
+                    <span class="edu-badge">DigitalOcean</span>
+                    <span class="edu-badge">Postman</span>
+                </div>
+                <p class="proj-tagline">
+                    An internal URL shortener service built for company employees, featuring high-speed long URL
+                    retrieval, server-side redirects, and company-wide error handling integration.
+                </p>
+            </div>
+        </section>
+
+        <!-- Content -->
+        <section class="project-content">
+            <div class="container">
+
+                <div class="proj-section">
+                    <h2 class="proj-section-title">OVERVIEW</h2>
+                    <div class="proj-section-body">
+                        <p>
+                            Built during my internship at Token Financial Technologies, this is an internal URL
+                            shortener
+                            service designed to streamline link sharing within the company's daily workflow. Employees
+                            can generate short codes for long URLs and share them across internal tools without managing
+                            unwieldy links.
+                        </p>
+                    </div>
+                </div>
+
+                <hr class="proj-divider">
+
+                <div class="proj-section">
+                    <h2 class="proj-section-title">TECHNICAL HIGHLIGHTS</h2>
+                    <div class="proj-section-body">
+                        <p>
+                            <strong style="color: var(--text-primary);">Redis as Primary Database —</strong>
+                            Rather than a relational database with a caching layer on top, Redis was chosen as the sole
+                            data store. Given the nature of the service (high-frequency short code lookups with no
+                            complex relational data), this eliminated unnecessary overhead and maximised retrieval
+                            speed.
+                        </p>
+                        <p>
+                            <strong style="color: var(--text-primary);">Server-Side Redirects —</strong>
+                            Redirects are handled on the server rather than the client to prevent XSS vulnerabilities
+                            that could arise from client-side URL injection.
+                        </p>
+                        <p>
+                            <strong style="color: var(--text-primary);">NanoID Short Code Generation —</strong>
+                            Short codes are generated using NanoID, providing collision-resistant, URL-safe identifiers
+                            without the overhead of UUIDs.
+                        </p>
+                        <p>
+                            <strong style="color: var(--text-primary);">Company Module Integration —</strong>
+                            Integrated internal company modules for consistent error handling, keeping the service
+                            aligned with the existing codebase conventions.
+                        </p>
+                    </div>
+                </div>
+
+                <hr class="proj-divider">
+
+                <div class="proj-section">
+                    <h2 class="proj-section-title">TESTING &amp; HANDOVER</h2>
+                    <div class="proj-section-body">
+                        <p>
+                            E2E tests were implemented prior to shipping to ensure reliability and correctness of the
+                            full request-response cycle. The project was handed over to the DevOps lead for deployment
+                            alongside detailed API documentation prepared with Postman.
+                        </p>
+                    </div>
+                </div>
+
+                <hr class="proj-divider">
+
+                <!-- Images — add src attributes when you have screenshots -->
+                <div class="proj-section">
+                    <h2 class="proj-section-title">LATER ADDITIONS</h2>
+                    <div class="proj-images-grid">
+                        <p class="proj-section-body" style="color: var(--text-secondary); opacity: 0.5;">
+                            After my internship, I added a basic user interface to the service and deployed it on a VPS.
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+    </main>
+</body>
+
+</html>

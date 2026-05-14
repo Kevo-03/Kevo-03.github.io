@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Photonamer — Kıvanç Onat Türker</title>
+    <link rel="stylesheet" href="../style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <ul class="nav-links">
+                <li><a href="../index.html#about" class="nav-link">About Me</a></li>
+                <li><a href="../index.html#education" class="nav-link">Education</a></li>
+                <li><a href="../index.html#experience" class="nav-link">Experience</a></li>
+                <li><a href="../index.html#projects" class="nav-link">Projects</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main>
+        <!-- Hero -->
+        <section class="project-hero">
+            <div class="container">
+                <a href="../index.html#projects" class="back-link">← Back to Projects</a>
+                <h1 class="proj-title">Photonamer</h1>
+                <div class="proj-badges">
+                    <span class="edu-badge">Python</span>
+                    <span class="edu-badge">Vision Language Model</span>
+                    <span class="edu-badge">CLI</span>
+                </div>
+                <p class="proj-tagline">
+                    A CLI tool that autonomously renames image files based on their date, subject, mood, and
+                    compositional technique — inferred by a vision language model.
+                </p>
+            </div>
+        </section>
+
+        <!-- Content -->
+        <section class="project-content">
+            <div class="container">
+
+                <div class="proj-section">
+                    <h2 class="proj-section-title">OVERVIEW</h2>
+                    <div class="proj-section-body">
+                        <p>
+                            Photonamer solves the problem of disorganised image libraries by automatically generating
+                            descriptive, human-readable filenames. Instead of <code
+                                style="color: var(--accent); font-family: monospace;">IMG_4823.jpg</code>, you get
+                            something like <code
+                                style="color: var(--accent); font-family: monospace;">2024-06_golden-hour-portrait_warm_rule-of-thirds.jpg</code>.
+                        </p>
+                        <p>
+                            Add your full description here — the motivation, the VLM you used (e.g. LLaVA, GPT-4V,
+                            Gemini Vision), how prompts are structured, and any batching or performance considerations.
+                        </p>
+                    </div>
+                </div>
+
+                <hr class="proj-divider">
+
+                <div class="proj-section">
+                    <h2 class="proj-section-title">HOW IT WORKS</h2>
+                    <div class="proj-section-body">
+                        <p>
+                            <strong style="color: var(--text-primary);">Vision Language Model —</strong>
+                            Each image is passed to a VLM which returns structured metadata: the date context inferred
+                            from EXIF or visual cues, the primary subject, the emotional mood, and the dominant
+                            compositional technique. Add specifics about your model and prompting strategy.
+                        </p>
+                        <p>
+                            <strong style="color: var(--text-primary);">CLI Interface —</strong>
+                            Run <code style="color: var(--accent); font-family: monospace;">photonamer ./my-photos/</code>
+                            to process a directory. Add details about flags, batch processing, dry-run mode, or any
+                            other CLI features.
+                        </p>
+                        <p>
+                            <strong style="color: var(--text-primary);">Output Format —</strong>
+                            Add details about the naming convention, how conflicts are handled, and whether original
+                            files are preserved.
+                        </p>
+                    </div>
+                </div>
+
+                <hr class="proj-divider">
+
+                <!-- Images -->
+                <div class="proj-section">
+                    <h2 class="proj-section-title">DEMO</h2>
+                    <div class="proj-images-grid">
+                        <!-- <img src="../images/projects/photonamer-1.png" class="proj-image" alt="CLI output example"> -->
+                        <!-- <img src="../images/projects/photonamer-2.png" class="proj-image" alt="Before and after filenames"> -->
+                        <p class="proj-section-body" style="color: var(--text-secondary); opacity: 0.5;">
+                            Screenshots will appear here.
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+    </main>
+</body>
+
+</html>
