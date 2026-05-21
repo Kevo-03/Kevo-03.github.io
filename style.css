@@ -11,6 +11,10 @@
     --transition: all 0.3s ease;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -132,6 +136,12 @@ body {
     /* Center content vertically */
     padding-top: 5rem;
     /* Account for the fixed navbar */
+    scroll-margin-top: 5rem;
+}
+
+/* Offset section headers so the fixed navbar doesn't cover them */
+.header-line {
+    scroll-margin-top: 5rem;
 }
 
 .landing-content {
@@ -526,6 +536,26 @@ body {
     color: #fff;
 }
 
+.email-btn {
+    background-color: transparent;
+    color: #fbd23c;
+    border: 2px solid #fbd23c;
+    font-family: inherit;
+    cursor: pointer;
+}
+
+.email-btn:hover {
+    background-color: #fbd23c;
+    color: #fff;
+}
+
+.email-btn--copied {
+    background-color: #22c55e;
+    border-color: #22c55e;
+    color: #fff;
+}
+
+
 /* Profile Image */
 .landing-image-container {
     display: flex;
@@ -727,4 +757,31 @@ body {
 
 .proj-external-link:hover {
     border-bottom-color: var(--accent);
+}
+
+.proj-github-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    color: var(--text-secondary);
+    text-decoration: none;
+    font-size: 1.1rem;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+    border-bottom: 1px solid rgba(148, 163, 184, 0.3);
+    padding-bottom: 0.1rem;
+    transition: color 0.2s ease, border-color 0.2s ease;
+}
+
+.proj-github-link:hover {
+    color: var(--text-primary);
+    border-bottom-color: var(--text-secondary);
+}
+
+.proj-links {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    margin-top: 1.5rem;
+    flex-wrap: wrap;
 }

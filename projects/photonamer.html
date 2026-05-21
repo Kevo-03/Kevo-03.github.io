@@ -37,8 +37,18 @@
                 </div>
                 <p class="proj-tagline">
                     A CLI tool that autonomously renames image files based on their date, subject, mood, and
-                    compositional technique — inferred by a vision language model.
+                    compositional technique.
                 </p>
+                <div class="proj-links">
+                    <a href="https://github.com/Kevo-03/Automatic-Photo-Namer" target="_blank" rel="noopener noreferrer"
+                        class="proj-github-link">
+                        GitHub →
+                    </a>
+                    <a href="https://pypi.org/project/photonamer/" target="_blank" rel="noopener noreferrer"
+                        class="proj-github-link">
+                        PyPi →
+                    </a>
+                </div>
             </div>
         </section>
 
@@ -50,15 +60,17 @@
                     <h2 class="proj-section-title">OVERVIEW</h2>
                     <div class="proj-section-body">
                         <p>
-                            Photonamer solves the problem of disorganised image libraries by automatically generating
-                            descriptive, human-readable filenames. Instead of <code
+                            When you take a photo with your camera, it generates a generic name for it like "IMG_1234.jpg".
+                            When you have directories full of these photos, it becomes hard to organize them and find what you are looking for.
+                             Photonamer solves this problem by automatically generating descriptive, human-readable filenames via a local Vision Language Model. Instead of <code
                                 style="color: var(--accent); font-family: monospace;">IMG_4823.jpg</code>, you get
                             something like <code
-                                style="color: var(--accent); font-family: monospace;">2024-06_golden-hour-portrait_warm_rule-of-thirds.jpg</code>.
+                                style="color: var(--accent); font-family: monospace;">20240605_GoldenRetrieverPuppy_Warm_RuleOfThirds.jpg</code>.
                         </p>
                         <p>
-                            Add your full description here — the motivation, the VLM you used (e.g. LLaVA, GPT-4V,
-                            Gemini Vision), how prompts are structured, and any batching or performance considerations.
+                            Tool lets you to decicide which fields (subject, mood, technique, date) be used for the naming, as well as the casing preference (e.g. lowercase, uppercase, camelcase, snakecase).
+
+                            You need an Apple Silicon to run this tool since it uses MLX framework for local inference.
                         </p>
                     </div>
                 </div>
@@ -70,37 +82,20 @@
                     <div class="proj-section-body">
                         <p>
                             <strong style="color: var(--text-primary);">Vision Language Model —</strong>
-                            Each image is passed to a VLM which returns structured metadata: the date context inferred
+                            Each image is passed to the VLM which returns structured JSON data: the date context inferred
                             from EXIF or visual cues, the primary subject, the emotional mood, and the dominant
-                            compositional technique. Add specifics about your model and prompting strategy.
+                            compositional technique. 
                         </p>
                         <p>
                             <strong style="color: var(--text-primary);">CLI Interface —</strong>
-                            Run <code style="color: var(--accent); font-family: monospace;">photonamer ./my-photos/</code>
-                            to process a directory. Add details about flags, batch processing, dry-run mode, or any
-                            other CLI features.
-                        </p>
-                        <p>
-                            <strong style="color: var(--text-primary);">Output Format —</strong>
-                            Add details about the naming convention, how conflicts are handled, and whether original
-                            files are preserved.
+                            Run <code style="color: var(--accent); font-family: monospace;">photonamer</code> inside your photos directory to start up the CLI wizard to set you naming preferences. 
+                            If you wish you can skip the wizard by setting your preferences with CLI flags, you can see the detailed description in GitHub repository or PyPi page.
                         </p>
                     </div>
                 </div>
 
-                <hr class="proj-divider">
 
-                <!-- Images -->
-                <div class="proj-section">
-                    <h2 class="proj-section-title">DEMO</h2>
-                    <div class="proj-images-grid">
-                        <!-- <img src="../images/projects/photonamer-1.png" class="proj-image" alt="CLI output example"> -->
-                        <!-- <img src="../images/projects/photonamer-2.png" class="proj-image" alt="Before and after filenames"> -->
-                        <p class="proj-section-body" style="color: var(--text-secondary); opacity: 0.5;">
-                            Screenshots will appear here.
-                        </p>
-                    </div>
-                </div>
+           
 
             </div>
         </section>

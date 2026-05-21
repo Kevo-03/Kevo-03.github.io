@@ -40,9 +40,8 @@
                     <h1>Hi, I'm <span class="highlight">Kıvanç Onat Türker</span></h1>
                     <h2>A New Grad Computer Engineer</h2>
                     <p>
-                        Welcome to my portfolio! I am a software engineer dedicated to building beautiful, responsive,
-                        and user-centric web applications.
-                        I love turning complex problems into simple, beautiful, and intuitive designs.
+                        I love tinkering with many fields of computer scinece, learn new concepts and technologies, with fullstack development, system design and machine learning being my main intesrests. 
+                        I constantly develop software as a hobby and look forward carry my skills to professional world. 
                     </p>
                     <div class="landing-actions">
                         <a href="https://github.com/Kevo-03" target="_blank" rel="noopener noreferrer"
@@ -53,6 +52,10 @@
                             class="btn social-btn linkedin-btn">
                             <i class="devicon-linkedin-plain"></i> LinkedIn
                         </a>
+                        <button id="email-copy-btn" class="btn social-btn email-btn" onclick="copyEmail()">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="1.3rem" height="1.3rem" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+                            <span id="email-btn-label">turker.kivanc26@gmail.com</span>
+                        </button>
                     </div>
                 </div>
                 <div class="landing-image-container">
@@ -90,7 +93,8 @@
                     </div>
                     <p class="edu-card-body">
                         Played a key role in the educative events of the society as a tutor in various workshops,
-                        lecturing freshmen on Python, Algorithms, and Fundamentals of Computer Science.
+                        lecturing freshmen on Python, Algorithms, and Fundamentals of Computer Science. 
+                        Developed a team management app for the internal use in the stıdent club.
                     </p>
                 </div>
 
@@ -103,8 +107,8 @@
                         <span class="edu-badge">Student Club</span>
                     </div>
                     <p class="edu-card-body">
-                        Participated in the Chip Design Team of the university's Automotive Club,
-                        gaining hands-on experience with hardware design and embedded systems concepts
+                        Selected by the Head of Computer Engineering Department to join the Chip Design Team within the University’s Automotive Club.
+                        Gained hands-on experience with hardware design and embedded systems concepts
                         alongside cross-disciplinary engineering peers.
                     </p>
                 </div>
@@ -238,14 +242,41 @@
                     <p class="project-card-body">CLI tool for autonomous image file renaming based on the date, subject,
                         mood and compositional technique using a vision language model .</p>
                     <div class="project-card-tags">
-                        <span class="edu-badge">React</span>
-                        <span class="edu-badge">TypeScript</span>
+                        <span class="edu-badge">Python</span>
+                        <span class="edu-badge">MLX</span>
                     </div>
                 </a>
 
             </div>
+
+            <div class="container" style="margin-top: 2rem; text-align: left;">
+                <span style="color: var(--text-secondary); font-size: 1.15rem; letter-spacing: 0.3px;">
+                    Want to see more?
+                </span>
+                <a href="https://github.com/Kevo-03" target="_blank" rel="noopener noreferrer"
+                    style="color: var(--accent); text-decoration: none; font-size: 1.15rem; font-weight: 500; letter-spacing: 0.3px; border-bottom: 1px solid rgba(56,189,248,0.3); padding-bottom: 1px; transition: border-color 0.2s ease; margin-left: 0.4rem;"
+                    onmouseover="this.style.borderBottomColor='var(--accent)'"
+                    onmouseout="this.style.borderBottomColor='rgba(56,189,248,0.3)'">
+                    View all projects on GitHub →
+                </a>
+            </div>
         </section>
     </main>
+    <script>
+        function copyEmail() {
+            const email = 'turker.kivanc26@gmail.com';
+            navigator.clipboard.writeText(email).then(() => {
+                const btn = document.getElementById('email-copy-btn');
+                const label = document.getElementById('email-btn-label');
+                label.textContent = '✓ Copied!';
+                btn.classList.add('email-btn--copied');
+                setTimeout(() => {
+                    label.textContent = email;
+                    btn.classList.remove('email-btn--copied');
+                }, 2000);
+            });
+        }
+    </script>
 </body>
 
 </html>

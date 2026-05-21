@@ -40,6 +40,12 @@
                     A CNN-Transformer hybrid model for encrypted network traffic classification, paired with a
                     real-time analysis dashboard.
                 </p>
+                <div class="proj-links">
+                    <a href="https://github.com/Kevo-03/AttentionNet" target="_blank" rel="noopener noreferrer"
+                        class="proj-github-link">
+                        GitHub →
+                    </a>
+                </div>
             </div>
         </section>
 
@@ -51,14 +57,14 @@
                     <h2 class="proj-section-title">OVERVIEW</h2>
                     <div class="proj-section-body">
                         <p>
-                            Attention Net classifies encrypted network traffic without decryption by analysing
-                            packet-level features. The CNN layers extract local byte-pattern features while the
-                            Transformer's self-attention mechanism captures long-range dependencies across packet
-                            sequences.
+                            Attention Net classifies encrypted network traffic by trating the problem as a computer vision task. 
+                            The system first creates image representations from raw packet data. 
+                            The CNN layers extract local byte-pattern features from these representations while the
+                            Transformer's self-attention mechanism captures dependencies between the extracted features.
                         </p>
                         <p>
-                            Add your full description here — the motivation for the project, the dataset used,
-                            classification categories, and any results or metrics.
+                            The model is trained on ISCX NonVPN-VPN dataset and achieves %86.45 overall accuracy and 0.88 Macro F1-Score. 
+                            A real time network analysis dahsboard was developed to utilize the model for real time encrypted network traffic analysis.
                         </p>
                     </div>
                 </div>
@@ -70,35 +76,26 @@
                     <div class="proj-section-body">
                         <p>
                             <strong style="color: var(--text-primary);">CNN-Transformer Hybrid —</strong>
-                            Add your architecture details here — layer counts, input representation, attention heads,
-                            embedding dimensions, and how the CNN and Transformer stages are connected.
+                            The model is a CNN-Transformer hybrid. The main motivation behind the architecture is to treat encrypted network traffic classification as a computer vision task, and enhance the performance of the CNN block with attention mechanism of Transformers
+                        </p>
+                        <p>
+                            <strong style="color: var(--text-primary);">Model and Training Implementation with PyTorch —</strong>
+                            The model and training procedure is implemented with PyTorch. 
                         </p>
                         <p>
                             <strong style="color: var(--text-primary);">Traffic Capture with Scapy —</strong>
-                            Scapy is used to capture and pre-process raw network packets into feature vectors suitable
-                            for model input. Add details about your feature extraction approach.
+                            Scapy is used to capture and pre-process raw network packets into image representations
+                            for model input.
                         </p>
                         <p>
                             <strong style="color: var(--text-primary);">Real-Time Dashboard —</strong>
                             A Streamlit dashboard visualises live classification results, traffic distributions, and
-                            model confidence scores in real time. Add detail about the dashboard's functionality.
+                            model confidence scores in real time. 
                         </p>
                     </div>
                 </div>
 
-                <hr class="proj-divider">
-
-                <!-- Images -->
-                <div class="proj-section">
-                    <h2 class="proj-section-title">SCREENSHOTS</h2>
-                    <div class="proj-images-grid">
-                        <!-- <img src="../images/projects/attentionnet-1.png" class="proj-image" alt="Dashboard view"> -->
-                        <!-- <img src="../images/projects/attentionnet-2.png" class="proj-image" alt="Model architecture"> -->
-                        <p class="proj-section-body" style="color: var(--text-secondary); opacity: 0.5;">
-                            Screenshots will appear here.
-                        </p>
-                    </div>
-                </div>
+               
 
             </div>
         </section>
