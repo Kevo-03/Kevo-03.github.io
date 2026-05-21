@@ -408,7 +408,7 @@ body {
 
 .icon-react {
     bottom: 150px;
-    left: 30px;
+    left: 50px;
     transform: rotate(12deg);
     font-size: 2.6rem;
     z-index: 3;
@@ -416,7 +416,7 @@ body {
 
 .icon-nestjs {
     bottom: 75px;
-    left: 105px;
+    left: 165px;
     transform: rotate(-25deg);
     font-size: 2.1rem;
     z-index: 2;
@@ -424,7 +424,7 @@ body {
 
 .icon-fastapi {
     bottom: 160px;
-    left: 140px;
+    left: 220px;
     transform: rotate(18deg);
     font-size: 2.8rem;
     z-index: 4;
@@ -432,7 +432,7 @@ body {
 
 .icon-docker {
     bottom: 13px;
-    left: 180px;
+    left: 290px;
     transform: rotate(-8deg);
     font-size: 2.5rem;
     z-index: 1;
@@ -440,7 +440,7 @@ body {
 
 .icon-spring {
     bottom: 90px;
-    left: 240px;
+    left: 380px;
     transform: rotate(25deg);
     font-size: 2.3rem;
     z-index: 3;
@@ -448,7 +448,7 @@ body {
 
 .icon-python {
     bottom: 5px;
-    left: 300px;
+    left: 465px;
     transform: rotate(-12deg);
     font-size: 2.9rem;
     z-index: 2;
@@ -456,7 +456,7 @@ body {
 
 .icon-nodejs {
     bottom: 145px;
-    left: 320px;
+    left: 510px;
     transform: rotate(-20deg);
     font-size: 2.4rem;
     z-index: 4;
