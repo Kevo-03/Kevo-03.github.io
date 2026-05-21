@@ -408,7 +408,7 @@ body {
 
 .icon-react {
     bottom: 150px;
-    left: 50px;
+    left: 30px;
     transform: rotate(12deg);
     font-size: 2.6rem;
     z-index: 3;
@@ -416,7 +416,7 @@ body {
 
 .icon-nestjs {
     bottom: 75px;
-    left: 165px;
+    left: 115px;
     transform: rotate(-25deg);
     font-size: 2.1rem;
     z-index: 2;
@@ -424,7 +424,7 @@ body {
 
 .icon-fastapi {
     bottom: 160px;
-    left: 220px;
+    left: 160px;
     transform: rotate(18deg);
     font-size: 2.8rem;
     z-index: 4;
@@ -432,7 +432,7 @@ body {
 
 .icon-docker {
     bottom: 13px;
-    left: 290px;
+    left: 200px;
     transform: rotate(-8deg);
     font-size: 2.5rem;
     z-index: 1;
@@ -440,7 +440,7 @@ body {
 
 .icon-spring {
     bottom: 90px;
-    left: 380px;
+    left: 265px;
     transform: rotate(25deg);
     font-size: 2.3rem;
     z-index: 3;
@@ -448,7 +448,7 @@ body {
 
 .icon-python {
     bottom: 5px;
-    left: 465px;
+    left: 360px;
     transform: rotate(-12deg);
     font-size: 2.9rem;
     z-index: 2;
@@ -456,7 +456,7 @@ body {
 
 .icon-nodejs {
     bottom: 145px;
-    left: 510px;
+    left: 350px;
     transform: rotate(-20deg);
     font-size: 2.4rem;
     z-index: 4;
@@ -553,6 +553,17 @@ body {
     background-color: #22c55e;
     border-color: #22c55e;
     color: #fff;
+}
+
+.resume-btn {
+    background-color: transparent;
+    color: #a3e635;
+    border: 2px solid #a3e635;
+}
+
+.resume-btn:hover {
+    background-color: #a3e635;
+    color: #0f172a;
 }
 
 
