@@ -593,18 +593,33 @@ body {
         padding-top: 2rem;
     }
 
+    .landing-text {
+        width: 100%;
+    }
+
     .landing-text p {
         margin: 0 auto 2.5rem auto;
     }
 
     .landing-actions {
         justify-content: center;
+        align-items: center;
     }
 
     .landing-image-container {
         order: -1;
         /* Move image to top on mobile */
     }
+
+    /* Scale icon positions down to fit the mobile content width (~300px) */
+    .icon-ts   { left: 35px; }
+    .icon-react  { left: 40px; bottom: 135px; }
+    .icon-nestjs { left: 105px; }
+    .icon-fastapi{ left: 145px; bottom: 145px; }
+    .icon-docker { left: 155px; bottom: 7px; }
+    .icon-spring { left: 210px; bottom: 70px;}
+    .icon-python { left: 265px; }
+    .icon-nodejs { left: 255px; }
 }
 
 @media (max-width: 576px) {
@@ -623,7 +638,18 @@ body {
 
     .landing-actions {
         flex-direction: column;
+        align-items: center;
+        width: 100%;
     }
+
+    .landing-actions .btn {
+        width: 100%;
+        justify-content: center;
+    }
+
+    /* Tighten icon spread further on very small screens */
+    .icon-python { left: 280px; }
+    .icon-nodejs { left: 270px; }
 }
 
 /* =============================================
